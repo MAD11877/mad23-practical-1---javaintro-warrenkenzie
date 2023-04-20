@@ -38,7 +38,6 @@ public class Question5
     int highest_freq = -1;
 
     while(input>0){
-      System.out.print(">");
       Scanner in1 = new Scanner(System.in);
       data.add(in1.nextInt());
       input--;
