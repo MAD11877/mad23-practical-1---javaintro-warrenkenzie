@@ -36,35 +36,40 @@ public class Question5
     ArrayList<Integer> value = new ArrayList<>(); 
 
     int highest_freq = -1;
-
-    while(input>0){
-      Scanner inputs = new Scanner(System.in);
-      data.add(inputs.nextInt());
-      input--;
-    }
-
-    for(int i:data){
-      if (!key.contains(i)){
-        key.add(i);
-        value.add(1);
+    if(input != 0){
+      while(input>0){
+        Scanner inputs = new Scanner(System.in);
+        data.add(inputs.nextInt());
+        input--;
       }
-      else{ 
-        value.set(key.indexOf(Integer.valueOf(i)), value.get(key.indexOf(Integer.valueOf(i))) + 1);
-      }
-    }
 
-    for(int i:value)
-    {
-      if (highest_freq == -1){
-        highest_freq = i; 
-      }
-      else{
-        if (highest_freq < i){
-          highest_freq = i;
+      for(int i:data){
+        if (!key.contains(i)){
+          key.add(i);
+          value.add(1);
+        }
+        else{ 
+          value.set(key.indexOf(Integer.valueOf(i)), value.get(key.indexOf(Integer.valueOf(i))) + 1);
         }
       }
-    }    
-    System.out.println(key.get(value.indexOf(highest_freq)));
+  
+      for(int i:value)
+      {
+        if (highest_freq == -1){
+          highest_freq = i; 
+        }
+        else{
+          if (highest_freq < i){
+            highest_freq = i;
+          }
+        }
+      }    
+      System.out.println(key.get(value.indexOf(highest_freq)));
+    }
+    else{
+      System.out.println(0);
+    }
+    
 
   }
 }
