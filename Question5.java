@@ -28,7 +28,7 @@ public class Question5
      */
     
     Scanner in = new Scanner(System.in);
-    Integer input = in.nextInt();
+    Integer first_input = in.nextInt();
     ArrayList<Integer> data = new ArrayList<>();
 
     /*dictionary */
@@ -36,11 +36,12 @@ public class Question5
     ArrayList<Integer> value = new ArrayList<>(); 
 
     int highest_freq = -1;
-    if(input != 0){
-      while(input>0){
+    if(first_input != 0){
+      while(first_input>0){
+        System.out.print("> ");
         Scanner inputs = new Scanner(System.in);
         data.add(inputs.nextInt());
-        input--;
+        first_input--;
       }
 
       for(int i:data){
