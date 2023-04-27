@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.concurrent.CountDownLatch;
 
 public class Question4
 {
@@ -18,6 +19,15 @@ public class Question4
      */
      
     Scanner in = new Scanner(System.in);
-    
+    String asterick = "*";
+    Integer num_col = in.nextInt();
+    for (int row = 1; row <= 5; row++) {
+     
+      for (int column = num_col; column > 0; column--) {
+        System.out.print(asterick);
+      }
+      num_col--;
+      System.out.println();
+    }
   }
 }
