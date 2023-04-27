@@ -39,8 +39,8 @@ public class Question5
     if(first_input != 0){
       while(first_input>0){
         System.out.print("> ");
-        Scanner inputs = new Scanner(System.in);
-        data.add(inputs.nextInt());
+        Integer input = in.nextInt();
+        data.add(input);
         first_input--;
       }
 
